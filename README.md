@@ -1,5 +1,5 @@
-# Video Restoration Framework and its Meta-adaptations to Data-poor Conditions (ECCV2022)
-Prashant W Patil, Sunil Gupta, Santu Rana, and Svetha Venkatesh
+# Multi-weather Image Restoration via Domain Translation (ICCV2022)
+Prashant W Patil, Sunil Gupta, Santu Rana, Svetha Venkatesh, and Subrahmanyam Murala
 
 
 [![paper](https://img.shields.io/badge/Paper-<COLOR>.svg)](https://drive.google.com/file/d/1itwA0a1JQvS6sVsGDJ8Pt2DnQtG3UrJ8/view?usp=sharing)
@@ -7,54 +7,48 @@ Prashant W Patil, Sunil Gupta, Santu Rana, and Svetha Venkatesh
 
 <hr />
 
-> **Abstract:** *Restoration of weather degraded videos is a challenging problem due to diverse weather conditions e.g., rain, haze, snow, etc. Existing works handle video restoration for each weather using a different custom-designed architecture. This approach has many limitations. First, a custom-designed architecture for each weather condition requires domain-specific knowledge. Second, disparate network architectures across weather conditions prevent easy knowledge transfer to novel weather conditions where we do not have a lot of data to train a model from scratch. For example, while there is a lot of common knowledge to exploit between the models of different weather conditions at day or night time, it is difficult to do such adaptation. To this end, we propose a generic architecture that is effective for any weather condition due to the ability to extract robust feature maps without any domain-specific knowledge. This is achieved by novel components: spatio-temporal feature modulation, multi-level feature aggregation, and recurrent guidance decoder. Next, we propose a meta-learning based adaptation of our deep architecture to the restoration of videos in data-poor conditions (night-time videos). We show comprehensive results on video de-hazing and de-raining datasets in addition to the meta-learning based adaptation results on night-time video restoration tasks. Our results clearly outperform the state-of-theart weather degraded video restoration methods.* 
+> **Abstract:** *Weather degraded conditions such as rain, haze, snow, etc. may degrade the performance of most computer vision systems. Therefore, effective restoration of multiweather degraded images is an essential prerequisite for successful functioning of such systems. The current multiweather image restoration approaches utilize a model that is trained on a combined dataset consisting of individual images for rainy, snowy, and hazy weather degradations. These methods may face challenges when dealing with real-world situations where the images may have multiple, more intricate weather conditions. To address this issue, we propose a domain translation-based unified method for multi-weather image restoration. In this approach, the proposed network learns multiple weather degradations simultaneously, making it immune for realworld conditions. Specifically, we first propose an instancelevel domain (weather) translation with multi-attentive feature learning approach to get different weather-degraded variants of the same scenario. Next, the original and translated images are used as input to the proposed novel multi-weather restoration network which utilizes a progressive multi-domain deformable alignment (PMDA) with cascaded multi-head attention (CMA). The proposed PMDA facilitates the restoration network to learn weather-invariant clues effectively. Further, PMDA and respective decoder features are merged via proposed CMA module for restoration. Extensive experimental results on synthetic and realworld hazy, rainy, and snowy image databases clearly demonstrate that our model outperforms the state-of-the-art multi-weather image restoration methods.* 
 <hr />
 
 ## Network Architecture
 
-<img src = 'Overview.jpg'> 
+<img src = 'Overview.png'> 
 
 ## Requirements:
 
-	Python >= 3.5
+	Anaconda
 
-	Tensorflow == 2.0
+	Pytorch > 1.8
 
-	Numpy
 
-	PIL
-
-## Testing Videos:
-	Keep Testing Videos Frames in "videos/{dataset}" folder.
+## Testing Images
+	Keep Testing Images in "dataset" folder.
 
 ## Checkpoints:
-	The checkpoints are provided for:
-	1. Scratch trained checkpoints for REVIDE and RainSynAll100 datasets.
-	2. Meta adapted checkpoints for "night time" Haze, Rain, and Rain+veling dataset.
-	3. Keep the checkpoints in "./checkpoints/dataset/"
-Download the checkpoint: [![Checkpoint](https://img.shields.io/badge/Checkpoint-<COLOR>.svg)](https://drive.google.com/file/d/144BGWIvF2d-dZA6_8y9rBgbbO9CvxULH/view?usp=sharing)
-
-## Testing Procedure:
-	1. select options  --dataset, --test_dir, --checkpoint_path in "options.py"  
-	2. Run "testing.py"
-	3. Results will be saved in --output_path
-
-## Database:
+	Keep the checkpoints in "./checkpoints/"
 
 
-Synthetically Generated Night-time Weather Degraded Database is available at: [![Database](https://img.shields.io/badge/Database-<COLOR>.svg)](https://drive.google.com/drive/folders/1zsW1D8Wtj_0GH1OOHSL7dwR_MIkZ8-zp?usp=sharing)
+## Databases
+	1. Outdoor_rain
+	2. CSD
+	3. SOTS-outdoor
+	4. Real-world
 
-```
+
+## For testing on any database:
+	1. Run the "test.py" file as python test.py
+	2. The results will be stored in "results/" folder
+
 
 ## Citation
 If our method is useful for your research, please consider citing:
     
-    @inproceedings{metarestoration2022,
-	title={Video Restoration Framework and its Meta-adaptations to Data-poor Conditions},
-	author={Prashant W Patil, Sunil Gupta, Santu Rana, and Svetha Venkatesh},
-	booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
-	pages={Accepted on 04/07/2022},
-	year={2022}
+    @inproceedings{DTRestoration2023,
+	title={Multi-weather Image Restoration via Domain Translation},
+	author={Prashant W Patil, Sunil Gupta, Santu Rana, Svetha Venkatesh, and Subrahmanyam Murala},
+	booktitle={Proceedings of the International Conference on Computer Vision (ICCV)},
+	pages={Accepted on 14/07/2023},
+	year={2023}
 
 }
 
