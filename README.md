@@ -12,7 +12,7 @@ Prashant W Patil, Sunil Gupta, Santu Rana, Svetha Venkatesh, and Subrahmanyam Mu
 
 ## Network Architecture
 
-<img src = 'Overview.png'> 
+<img src = 'Overview.jpg'> 
 
 ## Requirements:
 
