@@ -50,7 +50,7 @@ If our method is useful for your research, please consider citing:
     month     = {October},
     year      = {2023},
     pages     = {21696-21705}
-}
+    }
 
 
 ## Contact
