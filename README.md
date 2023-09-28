@@ -1,4 +1,4 @@
-# Multi-weather Image Restoration via Domain Translation (ICCV2022)
+# Multi-weather Image Restoration via Domain Translation (ICCV2023)
 Prashant W Patil, Sunil Gupta, Santu Rana, Svetha Venkatesh, and Subrahmanyam Murala
 
 
@@ -43,13 +43,13 @@ Prashant W Patil, Sunil Gupta, Santu Rana, Svetha Venkatesh, and Subrahmanyam Mu
 ## Citation
 If our method is useful for your research, please consider citing:
     
-    @inproceedings{DTRestoration2023,
-	title={Multi-weather Image Restoration via Domain Translation},
-	author={Prashant W Patil, Sunil Gupta, Santu Rana, Svetha Venkatesh, and Subrahmanyam Murala},
-	booktitle={Proceedings of the International Conference on Computer Vision (ICCV)},
-	pages={Accepted on 14/07/2023},
-	year={2023}
-
+    @InProceedings{Patil_2023_ICCV,
+    author    = {Patil, Prashant W. and Gupta, Sunil and Rana, Santu and Venkatesh, Svetha and Murala, Subrahmanyam},
+    title     = {Multi-weather Image Restoration via Domain Translation},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {21696-21705}
 }
 
 
