@@ -193,7 +193,7 @@ class merge_slots(nn.Module):
 
     def forward(self, x1, x2, x3, x4):
 
-        df1 = self.merge(x2, x2)
+        df1 = self.merge(x1, x2)
         df2 = self.merge(x3, df1)
         df3 = self.merge(x4, df2)
 
